@@ -1,0 +1,8 @@
+CREATE TABLE users(
+   id VARCHAR(20) PRIMARY KEY     NOT NULL,
+   password           VARCHAR(20),
+   ip           VARCHAR(20),
+   port        INT(10),
+   alive         INT(1)
+);
+insert into users values( 'test', 'test', '111.111.111.111', 223, 0);
