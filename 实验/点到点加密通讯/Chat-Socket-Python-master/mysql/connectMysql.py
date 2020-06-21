@@ -1,6 +1,8 @@
 import sqlite3
-import pdb
+import pdb, os
+print(os.getcwd())
 class ConnetMysql:
+
 
     def __init__(self):
         self.conn = None
@@ -8,7 +10,7 @@ class ConnetMysql:
     def get_conn(self):
         try:
             if self.conn is None:
-                self.conn = sqlite3.connect(r'D:\学校文件\大二后\计算机网络安全\实验\点到点加密通讯\Chat-Socket-Python-master\QcChat.db')
+                self.conn = sqlite3.connect(r'QcChat.db')
         except Exception as e:
             print("Error: {}".format(e))
         # pdb.set_trace()
