@@ -10,7 +10,7 @@ class ConnetMysql:
     def get_conn(self):
         try:
             if self.conn is None:
-                self.conn = sqlite3.connect(r'QcChat.db')
+                self.conn = sqlite3.connect(r'D:\GitProject\Internet-Security-ExpCode\实验\点到点加密通讯\Chat-Socket-Python-master\QcChat.db')
         except Exception as e:
             print("Error: {}".format(e))
         # pdb.set_trace()

@@ -17,8 +17,8 @@ def generate_RSA_key(key_len=2048):
     s_key = x.exportKey("PEM")  # 私钥
     g_key = x.publickey().exportKey("PEM")  # 公钥
     print(s_key)
-    write_RSA_key(public_key_path, g_key)
-    write_RSA_key(private_key_path, s_key)
+    # write_RSA_key(public_key_path, g_key)
+    # write_RSA_key(private_key_path, s_key)
     # 实现RSA 非对称加解密
     my_private_key = get_RSA_key(private_key_path)  # 私钥
     my_public_key = get_RSA_key(public_key_path)  # 公钥

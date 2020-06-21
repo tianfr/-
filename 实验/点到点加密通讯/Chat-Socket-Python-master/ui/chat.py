@@ -149,6 +149,7 @@ class Chat(QtWidgets.QWidget, Ui_MainWindow):
                                                QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
                                                QtWidgets.QMessageBox.No)
         if reply == QtWidgets.QMessageBox.Yes:
+            print("clicked ok buttion.")
             self._sign_out()
         else:
             QCloseEvent.ignore()
