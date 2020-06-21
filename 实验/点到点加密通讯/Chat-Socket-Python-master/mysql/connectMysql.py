@@ -1,6 +1,6 @@
 import sqlite3
 import pdb, os
-print(os.getcwd())
+# print(os.getcwd())
 class ConnetMysql:
 
 
