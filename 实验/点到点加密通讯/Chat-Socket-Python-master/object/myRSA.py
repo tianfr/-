@@ -65,7 +65,7 @@ def generate_RSAkey_with_sig(key_len=2048, owner='Anonymous'):
 def encrypt_with_rsa(plain_text, my_public_key):
 
     # 先公钥加密
-    cipher_pub_obj = PKCS1_v1_5.new(RSA.importKey(my_public_key))
+    cipher_pub_obj = PKCS1_v1_5 .new(RSA.importKey(my_public_key))
     _secret_byte_obj = cipher_pub_obj.encrypt(plain_text.encode())
 
     return _secret_byte_obj
