@@ -1,0 +1,17 @@
+卷 新加卷 的文件夹 PATH 列表
+卷序列号为 B46C-FA75
+D:.
+│  clientTest.py
+│  main2.py
+│  main3.py
+│  muti_mysql.py
+│  QcChat.db
+│  serverTest.py
+│  tree.txt
+│  __init__.py
+│  
+└─__pycache__
+        libclient.cpython-36.pyc
+        libserver.cpython-36.pyc
+        __init__.cpython-36.pyc
+        

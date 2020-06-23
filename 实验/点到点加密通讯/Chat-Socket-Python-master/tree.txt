@@ -1,0 +1,16 @@
+卷 新加卷 的文件夹 PATH 列表
+卷序列号为 B46C-FA75
+D:.
+├─.idea
+│  ├─dataSources
+│  └─inspectionProfiles
+├─debug
+│  └─__pycache__
+├─key_path
+├─mysql
+│  └─__pycache__
+├─object
+│  └─__pycache__
+├─recv_file
+└─ui
+    └─__pycache__
