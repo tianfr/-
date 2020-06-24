@@ -1,0 +1,47 @@
+Script started on Tue 19 May 2020 06:17:55 PM CST
+root@iZ2zed9y2x6c8rie9x45aaZ:/# openssl version
+OpenSSL 1.0.2g  1 Mar 2016
+root@iZ2zed9y2x6c8rie9x45aaZ:/# [Kroot@iZ2zed9y2x6c8rie9x45aaZ:/# 
+root@iZ2zed9y2x6c8rie9x45aaZ:/# openssl genrsa -aes128 -out fd.key 2048
+Generating RSA private key, 2048 bit long modulus
+....+++
+............................................+++
+e is 65537 (0x10001)
+Enter pass phrase for fd.key:
+Verifying - Enter pass phrase for fd.key:
+root@iZ2zed9y2x6c8rie9x45aaZ:/# cat fd.key
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,632C330AB584522D43731721F67685CC
+
+m+Kd5UBSA9XecONuurkEkg4cT722VDO/P7Qle5o52okQapoR2CFr8MVbSW7XXxz3
+CD3x+/nj5nIB9/FCHaArincaerreYixHGHHqODgTvdIK3H8vzjClDcD6BHLxj6QF
+xAC98IL7e3cv9Tx4HFT5rGM5c0tbQMNDtNg2OtPAiO2bQT1fcEVhbDUt6wu0qdla
+yaLOMtlPRkuwvfqeBr8TxMaAkTPykr3uHfa8/0/dtD2BDqTt9PyJPeCW+05kSUCo
+2V6/oEg5wcI/xbX/+diGX7G9+emn6zdonZziTgSsSyTkPL6YtRCOn63g2SXRMp7z
+b+XYY2i2M87JLZwwpjwOI2QaMHtNRIfylYPjXxkCthYA2eA+sod7eTPQ+rbza1nq
+KsKhSIVszx750Perx6Osdub69jcGjspiPqt36xbQIgVS8lzaNLLuGWijE3lhyHPP
+qnGmRP2Yrb3L1ICC2oVtog49HN8iwTZQvRKJgy6jE++gZk3yJYPtJ8NWFdxw/K7X
+fl+aU+kSqDurqr0n41aywMsTVGaXgkpmeYS/UQgG6QdSjil/mJ+03PntvAhpBgZv
+YyiP/2YXlVH9FK+YzftEsJbzUNuIWp1V/Hcw+fwnHphn5JKUDOE1+3zHouS+Vxso
+bMVY6/Xb+Ho48ERuaArP/aqZvGBH2Zz0kSw1x+Kqdt6/oO5ogCk1jIuB4DvdL61C
+GuSqBXe9oOTXdUnY6GEVmrODN/lpJqSv/Miofy0mYnZ8I/OfJAlX/9y051jnhu1Z
+UFgyoPN6MDorpkzjL09S6644MFmeD5KOhSxlx/R4mWHIle8erxnK7/BVodVuKghF
+Xn2sPjO9b5v7TbcoV1jBmPMTJDEfA0yYPzv8dsTTENc1KO5WZQfWp2BdRSa6kOOX
+MAPg4N190+Crvw8+ozNgdjH3XO8igJwjbPpO1vZvpw3C19xioGdHAykea0eulePp
+av9njRjwmBLg5H8+fK9yGNVSTSFMJ/XwEmotDKGxkSV23Ag9Vg0nENYTNXuuncvp
+EPFh6lgNQkFCINyrXON+wN44WyVm4w1O9nzo0/uQUVK37xT7tW2rdF1oYoT2wXtG
+/g1hpUbu92CBvsmDPP3YnKm2gKPO6gJKCVrSVwHZMQX5Qr8M/ZSZiDKB1icR5i7X
+mCKjuVW/A6D+JU2FWtmeKCBPObv+8GsYTQXlyw8fqUSW26I8V0Hgi7Iz+DHEiB4x
+GnWMXToPTNR25NPzHPltT3vj8BYHtU3teDoU2eSPNTTWl1Tgtvx1BEh4AwTeV7Gv
+ZcyA+fAvnTlVix0M1+5arCy+3JXzmTsHWKrjO//zkpx6QdaYjw9Y/q6VmAVqorbs
+W2+i9DQhnHWPw0YRqflMbqYRzjYBuwcsboTZsuAYCVHIxXBqKN0GvPxU8t7LU+5s
+0G/X24AyhsG1M4dVjKLXIaHBl0TIu4gfMqH4aR6BWfTljnHjzThw8zklGpS1SghL
+vBMq6+SkI70F85Tz5eCelkj5jV2fC5wzvfGZCZd7z8PU0odf7dsTQf5IZcY4Fw2P
+dTFTMz3XqSlNxa/YsUac611CDw4mNk3IFDoNa56OsySgA/ucW1O6D5kSNcQ4hMrV
+-----END RSA PRIVATE KEY-----
+root@iZ2zed9y2x6c8rie9x45aaZ:/# [Kroot@iZ2zed9y2x6c8rie9x45aaZ:/# 
+root@iZ2zed9y2x6c8rie9x45aaZ:/# exit
+exit
+
+Script done on Tue 19 May 2020 06:32:17 PM CST

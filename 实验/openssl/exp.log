@@ -1,0 +1,145 @@
+Script started on Tue 19 May 2020 06:38:47 PM CST
+root@iZ2zed9y2x6c8rie9x45aaZ:/# openssl genrsa -aes128 -out fd.key 2048
+Generating RSA private key, 2048 bit long modulus
+...............................................+++
+...................................+++
+e is 65537 (0x10001)
+Enter pass phrase for fd.key:
+Verifying - Enter pass phrase for fd.key:
+root@iZ2zed9y2x6c8rie9x45aaZ:/# cat[K[K[K cat fd.key
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,407C833BB878723AB895979952CABCA6
+
+zymclSkd5v4xETCb7ZoTfr/C7asuIHxM5P/GXz7Z2kkBh6vnxm85wCEfBToMQktO
+fCTeWo8yOGO1R0/DS8WTfvu/ZsY1QEKkfVKOXAN5Fgo41l05cfb2ermx4D2QLoBs
+vLcEuamzV9/0GPLjAAmg41Vgpu8eez42yhrn7gareZKQUV5m26a6PCa+mihij5BK
+lULXhWpyS8PZRklnCrFKx9mR2pyvi1aMdIU0tjQrfnaF26+loxOegjAHqZWsYm3l
+mXlb6ABibEBUK7CmK5a1N+SlnxkalvSE54Tu8WyCorwTwljLCWToZkYdw5CHRdG2
+HS/jGRppNClj3cMfqsrYVKS82kGcbPEmeudKpYlSVtPSAW3fUk9Ww4ZhDM/z91T9
+xpjItX+dvWF1Bc3g3vywb1aayUeSF/u50N1RMRCtvSa6M0eJ8kAbQu3byzTlKR2J
+KaF5e8x+mdW1X2bjlQdpjXhw1cwa6NhkyyoUHuGSeQuJpRG3CrIYG4gYdVeRs5zl
+taAZc8UXF8NFRfwer+C6oJ6V1L60pO2bQmzWzflHauLSkNsKi7yAXGwlI0Qa+JmT
+tDukVGm7+F9CEBTJGJyWk14VjXYSBDd+gEsdAYdq+K5A3F1fM/JUlF0euLPyRF5/
+OnpLI92GbrIcnnn0nhl27NlkoXn5QwXHeRlj7lkZDJaH1/Q0kfx+hocL+t0Oa3NT
+hQhPSwZIlbAF/TxJA8ogOr7qPSjofRGoGPLs6nXFmYSyc0gXIinfp6tLR9ilbHU8
+0lqM5Tec1qNrxrBGcd7OlzquTfmSdTijohXhtGkCfRAoNTwqT/CK35gp4YPjX1lx
+/zt+y2hxXZiA6ECgdA4eA6oBVLGhfH1I97tnAGDiGqkp/wP5w2eppZVvAnmlN59Q
+bxjyAJ8q2BVCeBJy4Vv2DZmibBE/k8dJz5uerDYwElvrLoL2vGPr0sWi4Q6OQP4r
+noMW6Ll43H9D/D2IpOCpxt/z87ovrQ4EO+SW6637p5zHL5BkazXES3JsRlbUnUkt
+7EKz4hGX4T2RZTeCaTNPPFIo9hzddEkwX67crC8KTtf96ASkc2Q2sUsyV+TLpFBN
+ATLYqOSYV7YsKOW059y4KbVjBXvlc6ltl0eB+1WOaFCiIsf8hxk1RNKre1DG9kHl
+ADLdeMuvJBZNR4SdWudovGDzMFfhXS1JJPLKnE3x3Fhflkep9lUHSfZBvvBsx5vx
+GBV7vI5CBXeddgRF912YBN/kflYBTjREva1x/jhjCkshpTSJOH7M3nGQGzc/ra3G
+jP1biMfibpgtNP+sQoT92SYSjkiJkKkEtJOr7UYJvqbMMtgUbJx8VlrxGzBg/Z0j
+w1qmmCwzOfXeSkLKQRUCj5XNp1OI/PjMdvSCmiRP2jCWS3YolyVmADAZPtXJaeOK
+FywCjEhcNhoA234EsQgnU3vxInnCbKJ6jRHv0PEIDA2eMnIQUxABhHGTZmNzqTFD
+IzDQR9hqaE36O4kP+lFhnN/CJq3OI4Q2rNhIWl8Q7pbhF6uqgqMk6/kUzZgQbwTS
+CHt/ghnHMn4WDAc/KLeZqG4klA8otVYHNrmt/YFyAhVxGUvAKPl+N6c0Zu/kJOHZ
+-----END RSA PRIVATE KEY-----
+root@iZ2zed9y2x6c8rie9x45aaZ:/# OPENSSL RSA -IN FD.KEY -PUBOUT -OUT FD-PUBLIC.KEY
+OPENSSL: command not found
+root@iZ2zed9y2x6c8rie9x45aaZ:/# openssl rsa -in fd.key -pubout -out fd-public.key
+Enter pass phrase for fd.key:
+writing RSA key
+root@iZ2zed9y2x6c8rie9x45aaZ:/#  cat fd-public.key
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0OtFdV0ilAj5eBkAVN4g
+K3+LON82U8LXGexx83dg2HRXbeX/pyUfDlOeYLnaH9Gv8F3wL/1NV/m9cJT48sVl
+h4K5Voc4sJSXQKQ0IeF1zs1Y4hvXLd53E4AqFVuYs6BCuAneBKRfNFwmaJuggDjP
+uaQ6CfIhmUEePGwdOrLWYjJGhXkvsMGyYjP38vpOT9bKDs9puhEWQpKxfWf5vhif
+BswhE79Lad2QtCdiZ29I349ruW2rVoCgvvmNxGbXrMVV5VOke8OuXIHizWyyXTDp
+uUvhJunEa1j1vZr0qHAO3YKiocJ6Ev+H0GrgV+eNu4Cl8VD4Ernu8BZDSE4e71qJ
+XQIDAQAB
+-----END PUBLIC KEY-----
+root@iZ2zed9y2x6c8rie9x45aaZ:/# openssl genrsa -aes128 -out fd.key 2048 
+Generating RSA private key, 2048 bit long modulus
+.......+++
+..................................................+++
+e is 65537 (0x10001)
+Enter pass phrase for fd.key:
+Verifying - Enter pass phrase for fd.key:
+root@iZ2zed9y2x6c8rie9x45aaZ:/# openssl req -new -key fd.key -out fd.csr
+Enter pass phrase for fd.key:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:GB
+State or Province Name (full name) [Some-State]:.
+Locality Name (eg, city) []:London
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Feisty Duck Ltd
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:http://www.feistyduck.com/
+Email Address []:webmaster@feistyduck.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+root@iZ2zed9y2x6c8rie9x45aaZ:/# openssl version -a
+OpenSSL 1.0.2g  1 Mar 2016
+built on: reproducible build, date unspecified
+platform: debian-amd64
+options:  bn(64,64) rc4(16x,int) des(idx,cisc,16,int) blowfish(idx) 
+compiler: cc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -m64 -DL_ENDIAN -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wa,--noexecstack -Wall -DMD32_REG_T=int -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+OPENSSLDIR: "/usr/lib/ssl"
+root@iZ2zed9y2x6c8rie9x45aaZ:/# [Kroot@iZ2zed9y2x6c8rie9x45aaZ:/# cd /use[Kr/[Kroot@iZ2zed9y2x6c8rie9x45aaZ:/# cd /usr/lib.[K/ssl
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl# [Kroot@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl# mkdir CA
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl# [Kroot@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl# cd CA
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# [Kroot@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# mkdir certs
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# mkde[Kir newcerts
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# mkdir private
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# mkd[Kdir in[K[K[K crl
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# touch index.txt
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# echo -[K01.[K>serial
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# ls
+[0m[01;34mcerts[0m  [01;34mcrl[0m  index.txt  [01;34mnewcerts[0m  [01;34mprivate[0m  serial
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# [Kroot@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# ll
+total 28
+drwxr-xr-x 6 root root 4096 May 19 20:07 [0m[01;34m.[0m/
+drwxr-xr-x 4 root root 4096 May 19 20:05 [01;34m..[0m/
+drwxr-xr-x 2 root root 4096 May 19 20:06 [01;34mcerts[0m/
+drwxr-xr-x 2 root root 4096 May 19 20:07 [01;34mcrl[0m/
+-rw-r--r-- 1 root root    0 May 19 20:07 index.txt
+drwxr-xr-x 2 root root 4096 May 19 20:06 [01;34mnewcerts[0m/
+drwxr-xr-x 2 root root 4096 May 19 20:06 [01;34mprivate[0m/
+-rw-r--r-- 1 root root    1 May 19 20:07 serial
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# Generate CA private key   --->ca.key
+Generate: command not found
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# openssl genrsa -out ca.key 2048
+Generating RSA private key, 2048 bit long modulus
+..........................+++
+.................+++
+e is 65537 (0x10001)
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# openssl req -new -key ca.key -out ca.csr 
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:.
+State or Province Name (full name) [Some-State]:.
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:tfr
+Email Address []:tfr@tfr.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:openssl
+An optional company name []:
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# [Kroot@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt  
+Signature ok
+subject=/O=Internet Widgits Pty Ltd/CN=tfr/emailAddress=tfr@tfr.com
+Getting Private key
+root@iZ2zed9y2x6c8rie9x45aaZ:/usr/lib/ssl/CA# openssl genrsa  -out server.key 1024
+Generating RSA private key, 1024 bit long modulus
+.................++++++
+....
