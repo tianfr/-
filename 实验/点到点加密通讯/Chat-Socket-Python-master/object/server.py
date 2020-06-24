@@ -33,22 +33,17 @@ class Server():
         try:
             while True:
                 events = self.sel.select(timeout=None)
-
                 for key, mask in events:
-                    # print(mask)
                     if key.data is None:
                         # print("Enter accept_wrapper")
                         self.accept_wrapper(key.fileobj)
                     else:
                         # print("Enter service_connection")
-                        print(key.fileobj)
                         self.service_connection(key, mask)
-
         except KeyboardInterrupt:
             print("caught keyboard interrupt, exiting")
         except WindowsError:
             print("WindowsError")
-
         finally:
             self.sel.close()
 
@@ -71,30 +66,23 @@ class Server():
         try:
             sock = key.fileobj
             data = key.data
-
             if mask & selectors.EVENT_READ:
-                # print("b")
                 recv_data = sock.recv(2048)  # Should be ready to read
-
-                print(recv_data.type)
                 if recv_data:
                     print("enter _process_recv")
                     self._process_recv(recv_data, data)
                 else:
                     self._process_client_sign_out(sock, data)
         except WindowsError:
-            print("service_connection WindowsError")
             sock = key.fileobj
-            peer_ip, peer_port = sock.getpeername()
+            conn, addr = sock.accept()
             print("service_connection WindowsError")
-            update_sql = "update users set ip = '%s', port = '%s' where alive = 0 and ip = '0' and port = 0" % (peer_ip, peer_port)
-            print(update_sql)
-            self.db.update(update_sql)
+            self.db.update("update users set ip = '%s', port = '%s' where alive = 0 and ip = '0' and port = 0" % (
+            addr[0], addr[1]))
 
 
         except Exception as e:
             print(e)
-
 
     def _json_decode(self, json_bytes, encoding="utf-8"):
         tiow = io.TextIOWrapper(
